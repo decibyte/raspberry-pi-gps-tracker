@@ -11,7 +11,7 @@ My hardware used for this project is:
 
 This could probably be used with other hardware as well.
 
-gpst.py is a simple script checking GPS device for location and report that location to a website once in a while.
+gpst.py is a simple script checking GPS device for location and reporting that location to a website once in a while.
 
 Copy settings-example.py to settings.py and tune it to your needs.
 
