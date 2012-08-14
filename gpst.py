@@ -33,8 +33,9 @@ if __name__ == '__main__':
 	while 1:
 		data = gpsp.get_current_value()
 		if data:
-			print(data.lat, data.lon)
-			urllib.urlopen(settings.url, 'lat=%s&lon=%s' % (data.lat, data.lon))
+			epoch = time.time()
+			print('%s: [%s,%s]' % (epoch, data.lat, data.lon,))
+			urllib.urlopen(settings.url, 'lat=%s&lon=%s&epoch=%s' % (data.lat, data.lon, time.time(),))
 		else:
 			if no_data > 4:
 				print('It seems like there will never be any data. Check that all hardware works as expected and/or try restarting the script.')
